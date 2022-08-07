@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ```
 npm install -g @angular/cli
 ```
-3. Then clone the project git repository on your project folder:
+3. Then clone the project git repository:
 ```
 git clone git@github.com:arielbalvarezz/frontend-assessment.git
 ```
