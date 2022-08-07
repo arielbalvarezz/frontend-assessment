@@ -1,15 +1,20 @@
-# Front End Assessment
+# MindArc Front End Assessment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
-## Development server
+## To run the project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. clone the git repository, In the terminal run:
+```
+git clone git@github.com:arielbalvarezz/frontend-assessment.git
+```
+2. Then enter to the directory:
+```
+cd frontend-assessment
+```
+3. Lastly run the following commands:
+```
+npm install
+ng serve -o
+```
+that should open a new tab in your browser. In case, no new tab appears in your browser navigate to `http://localhost:4200/`
