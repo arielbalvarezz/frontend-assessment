@@ -1,0 +1,12 @@
+<div class="articles container pt-5 pb-5">
+    <!-- Start of article -->
+    <div class="article rounded" *ngFor="let article of articles | async">
+        <!-- Article image -->
+        <img class="article-image rounded mb-3" src="../../assets/images/{{ article.image }}" alt=""/>
+        <!-- Article description -->
+        <div class="article-description">{{ article.description }}</div>
+        <!--  Article Link-->
+        <a href="{{ article.link }}" class="article-action">{{ article.linkText }}</a>
+    </div>
+    <!-- End of aticle -->
+  </div>

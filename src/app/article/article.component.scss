@@ -1,0 +1,84 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+@import '../../assets/scss/reset';
+@import '../../assets/scss/defaults';
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/helpers';
+
+.articles {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+    }  
+
+    .article {
+        @include box-shadow(0, 0, 3px, $gray-300);
+
+        position: relative;
+        padding: 16px 16px 80px 16px;
+        font-size: 15px;
+        text-align: center;
+
+        &-image {
+            width: 100%;
+        }
+
+        &-action {
+            @include rounded(30px);
+
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 150px;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: 3px solid $black;
+            color: $black;
+        }
+    }
+}
+
+.articles {
+    &-list {
+        &-item {
+            @include box-shadow(0, 0, 3px, $gray-300);
+
+            position: relative;
+            margin-bottom: 30px;
+            padding: 16px 16px 80px 16px;
+            font-size: 15px;
+            text-align: center;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-image {
+                width: 100%;
+            }
+
+            &-action {
+                @include rounded(30px);
+
+                position: absolute;
+                bottom: 16px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                width: 150px;
+                padding: 10px 20px;
+                font-weight: bold;
+                border: 3px solid $black;
+                color: $black;
+            }
+        }
+    }
+}

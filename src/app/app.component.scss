@@ -1,0 +1,13 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+.banana {
+    &-answer {
+        border: 1px solid $gray-300;
+        text-align: center;
+    }
+
+    &-code {
+        font-family: 'Courier New', Courier, monospace;
+    }
+}

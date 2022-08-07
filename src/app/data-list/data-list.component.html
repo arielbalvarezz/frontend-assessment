@@ -1,0 +1,24 @@
+<div class="container pt-5 pb-5">
+    <!-- Start of Data List -->
+    <div class="data-list gtc-{{ (newDataList | async)?.length }}">
+        <div class="data-list-item" *ngFor="let data of newDataList | async">
+
+            <!-- Start of data list item title -->
+            <div class="data-list-item-title p-3"
+                [class.data-list-item-title--is-open]="data.isOpen"
+                [class.data-list-item-title--is-prev-open]="data.isPreviousOpen"
+                (click)="toggleData(data)"
+            >{{ data.title }}</div>
+            <!-- End of data list item title -->
+
+            <!-- Start of data list item content -->
+            <div class="data-list-item-content gc-1{{ (newDataList | async)?.length }}" 
+                [class.data-list-item-content--is-open]="data.isOpen"
+                [class.data-list-item-content--is-prev-open]="data.isPreviousOpen"
+                [innerHTML]="data.content">
+            </div>
+            <!-- End of data list item content -->
+        </div>
+    </div>
+    <!-- End of Data List-->
+</div>

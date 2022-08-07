@@ -1,0 +1,77 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+@import '../../assets/scss/grid';
+@import '../../assets/scss/reset';
+
+@keyframes expand {
+    from {
+        max-height: 0px;
+    }
+    to {
+        max-height: 300px;
+    }
+}
+
+.data-list {
+    &-item {
+        overflow: hidden;
+        &-title {
+            position: inherit;
+            text-align: center;
+            border: 1px solid $gray-300;
+            text-align: left;
+
+            &--is-open {
+                background: $gray-200;
+                border: none;
+                color: $gray-600;
+                font-weight: bold;
+            }
+        }
+
+        &-content {
+            position: inherit;
+            background: $gray-200;
+            color: $gray-600;
+            max-height: 0;
+            
+            &--is-open {
+                padding: 16px;
+                height: auto;
+                max-height: 600px;
+                animation: expand .8s ease-out;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        display: grid;
+
+        &-item {
+            display: contents;
+
+            > div:nth-of-type(2n) {
+                order: 1;
+            }
+
+            &-title {
+                display: inline-block;
+
+                &--is-open {
+                    pointer-events: none;
+                }
+            }
+
+            &-content {
+                display: none;
+            
+                &--is-open {
+                    display: block;
+                    animation: none;
+                }
+            }
+        }
+    }
+}

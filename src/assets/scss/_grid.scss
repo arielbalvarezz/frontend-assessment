@@ -1,0 +1,35 @@
+@mixin grid-template-columns($col: 10) {
+    $i: 1;
+    $className: '.gtc-';
+    $styleName: 'grid-template-columns';
+  
+    @while $i <= $col {
+      #{$className + $i} {
+        #{$styleName}: repeat(#{$i}, 1fr);
+      }
+  
+      $i: $i + 1;
+    }
+}
+
+@mixin grid-column($start: 1, $end: 10) {
+    $className: '.gc-';
+    $styleName: 'grid-column';
+  
+    @while $start <= $end {
+        $i: 1;
+        @while $i <= $end {
+            #{$className + $start}#{$i} {
+                #{$styleName}: #{$start}/#{$i + 1};
+            }
+            $i: $i + 1;
+        } 
+      $start: $start + 1;
+    }
+}
+
+// grid-template-columns
+@include grid-template-columns();
+
+// grid-column
+@include grid-column();
